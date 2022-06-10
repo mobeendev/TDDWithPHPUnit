@@ -18,6 +18,11 @@
         <testsuite name="default">
             <directory>tests</directory>
         </testsuite>
+
+         <testsuite name="Math">
+            <directory>tests/MathCalculatorTest.php</directory>
+        </testsuite>
+
     </testsuites>
 
     <coverage cacheDirectory=".phpunit.cache/code-coverage"
@@ -29,4 +34,3 @@
 </phpunit>
     
 
-             <!-- forceCoversAnnotation="true" -->
