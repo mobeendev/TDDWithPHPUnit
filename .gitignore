@@ -1,0 +1,12 @@
+# PHPUnit
+/.phpunit.cache
+.phpunit.result.cache
+
+
+
+
+# Composer
+/vendor
+/composer.lock
+
+
