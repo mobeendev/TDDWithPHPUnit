@@ -23,6 +23,14 @@
             <directory>tests/MathCalculatorTest.php</directory>
         </testsuite>
 
+         <testsuite name="Fixtures">
+            <directory>tests/Fixtures</directory>
+        </testsuite>
+
+         <testsuite name="FixturesTrait">
+            <directory>tests/Fixtures/ShopingCartTestWithTraitsTest.php</directory>
+        </testsuite>
+
     </testsuites>
 
     <coverage cacheDirectory=".phpunit.cache/code-coverage"
