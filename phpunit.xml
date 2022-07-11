@@ -19,17 +19,21 @@
             <directory>tests</directory>
         </testsuite>
 
-         <testsuite name="Math">
+        <testsuite name="Math">
             <directory>tests/MathCalculatorTest.php</directory>
         </testsuite>
 
-         <testsuite name="Fixtures">
+        <testsuite name="Fixtures">
             <directory>tests/Fixtures</directory>
         </testsuite>
 
-         <testsuite name="FixturesTrait">
+        <testsuite name="FixturesTrait">
             <directory>tests/Fixtures/ShopingCartTestWithTraitsTest.php</directory>
         </testsuite>
+
+        <testsuite name="PrivateProtected">
+            <directory>tests/UserTest.php</directory>
+         </testsuite>
 
     </testsuites>
 
