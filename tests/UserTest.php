@@ -15,15 +15,8 @@ class UserTest extends  TestCase {
                 return $this->first_name;
 
             }
-
-//            $phpunit->assertSame($expected, $this->first_name);
         };
-        // $executeAssertClosure = $assertClosure->bindTo($user, get_class($user));
-
-
         $this->assertSame($expected, $user->getFirstName());
-
-        // $this->assertSame($expected, $assertClosure->getFirstName());
     }
 
     public function testValidUserName2() 
@@ -57,6 +50,35 @@ class UserTest extends  TestCase {
         $executeSetUserClosure();
 
         $this->assertSame('Donald Trump', $user->getFullName());
+    }
+
+    public function testPrivateMethod()
+    {
+        $phpunit = $this;
+        $user = new User('donald', 'Trump' , 'abc@gmail.com');
+        $expected = 'Donald';
+        $assertClosure = function ()  use ($phpunit,$expected){
+            $phpunit->assertSame($expected, $this->iAmPrivateMethod());
+        };
+        $executeAssertClosure = $assertClosure->bindTo($user, get_class($user));
+        $executeAssertClosure();
+        // $this->assertSame($expected, $user->name);
+    }
+
+
+     public function testProtectedMethod()
+    {
+        $phpunit = $this;
+        $expected = 'abc@gmail.com';
+        $user = new class('donald', 'Trump', 'abc@gmail.com') extends User {
+            
+            public function callProtectedMethod(){
+
+                return $this->iAmProtectedMethod();
+
+            }
+        };
+        $this->assertSame($expected, $user->callProtectedMethod());
     }
 
 

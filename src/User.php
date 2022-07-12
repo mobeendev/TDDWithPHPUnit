@@ -25,4 +25,18 @@ class User
     {
         return $this->first_name.' '.$this->last_name;
     }
+
+ 
+    private function iAmPrivateMethod()
+    {
+        return $this->first_name;
+ 
+    }
+
+    protected function iAmProtectedMethod()
+    {
+        return $this->email;
+    }
+
+
 }
