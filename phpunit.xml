@@ -43,6 +43,10 @@
             <directory>tests/Interfaces/ProductAbstractTest.php</directory>
         </testsuite>
 
+        <testsuite name="TestStaticMethod">
+            <directory>tests/Interfaces/ProductStaticTest.php</directory>
+        </testsuite>
+
     </testsuites>
 
     <coverage cacheDirectory=".phpunit.cache/code-coverage"
