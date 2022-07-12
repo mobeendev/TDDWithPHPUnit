@@ -1,7 +1,7 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-class EmailTest extends  TestCase {
+class ProductInterfaceTest extends  TestCase {
 
 
     public function testProductWithSessionInterface()
@@ -11,7 +11,7 @@ class EmailTest extends  TestCase {
     }
 
 
-     public function testProductWithMockSessionInterface()
+    public function testProductWithMockSessionInterface()
     {
         $product = new Product(new Session);
         $session = new class implements SessionInterface {
@@ -25,6 +25,5 @@ class EmailTest extends  TestCase {
         $product = new Product($session);
         $this->assertSame('product 1',$product->fetchProductById(1));
     }
-
 
 }

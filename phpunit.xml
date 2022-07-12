@@ -39,6 +39,10 @@
             <directory>tests/Interfaces/ProductTest.php</directory>
         </testsuite>
 
+        <testsuite name="TestAbstractClass">
+            <directory>tests/Interfaces/ProductAbstractTest.php</directory>
+        </testsuite>
+
     </testsuites>
 
     <coverage cacheDirectory=".phpunit.cache/code-coverage"
