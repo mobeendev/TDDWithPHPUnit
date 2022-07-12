@@ -62,7 +62,6 @@ class UserTest extends  TestCase {
         };
         $executeAssertClosure = $assertClosure->bindTo($user, get_class($user));
         $executeAssertClosure();
-        // $this->assertSame($expected, $user->name);
     }
 
 
