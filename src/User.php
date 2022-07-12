@@ -1,9 +1,17 @@
 <?php
 
+class Database {
+
+    public function getEmailAndLastName()
+    {
+        echo 'real db touched';
+    }
+}
+
 class User
 {
-    private $first_name;
-    private $last_name;
+    protected $first_name;
+    protected $last_name;
     protected $email;
  
     public function __construct($first_name, $last_name, $email)
@@ -15,6 +23,6 @@ class User
  
     public function getFullName()
     {
-        return $this->name.' '.$this->last_name;
+        return $this->first_name.' '.$this->last_name;
     }
 }
